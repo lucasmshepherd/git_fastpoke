@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fastpoke</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel=icon href="assets/img/favicon.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="print" href="print.css">
+    <script src="https://kit.fontawesome.com/1a4d6d985d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>
+          <a href="index.html" class="logo">
+            <img src="assets/img/logo.svg" alt="Fastpoke Logo" />
+          </a>
+        </h1>
+        <a href="#" class="btn btn-outline"><b>Browse <span>Recruiters</span></b></a>
+        <span class="tagline"></span>
+        <nav>
+          <ul class="clean">
+            <li><a href="account.html" class="btn btn-signin"><i class="fad fa-sign-in-alt"></i><span>Sign In</span></a></li>
+            <li><a href="register.html" class="btn btn-primary btn-signin"><i class="fad fa-user-plus"></i><span>Sign Up</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="banner content header">
+        <div class="container">
+          <h1>About Us</h1>
+        </div>
+      </section>
+      <section class="banner content simple" id="about-01">
+        <div class="container">
+          <div class="pane pane-copy">
+            <h3>Our Mission</h3>
+            <p class="big">To empower hiring authorities, top talent, and top specialized recruiters by changing how they connect.</p>
+          </div>
+          <div class="pane pane-image">
+            <img src="assets/img/rocket-blast-off.svg" />
+          </div>
+        </div>
+      </section>
+      <section class="banner content simple" id="about-02">
+        <div class="container">
+          <div class="pane pane-image">
+            <img src="assets/img/plant-grow.svg" />
+          </div>
+          <div class="pane pane-copy">
+            <h3>Our Origins</h3>
+            <p class="med">Fastpoke was designed by a group of young professionals
+              and veteran headhunters in Stamford, CT with a major goal:
+              to help connect professionals with smaller, specialized
+              recruitment firms. The platform was also designed to help
+              talented recruiters market themselves to hiring authorities.
+              With months of brainstorming, hard work, and refining, the
+              platform was launched in August of 2020.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="banner content simple" id="about-03">
+        <div class="container">
+          <div class="pane pane-copy">
+            <h3>What is Fastpoke?</h3>
+            <p class="med">Fastpoke is a platform for professionas to connect 
+              with top specialized recruiters. It is specificaly
+              for smaller, specialized (boutique) recruitment firms.
+               If you're a great recruiter or you are looking for one, 
+              Fastpoke is the place to be!              
+            </p>
+            <p class="med">
+              We believe the recruiting industry is a valuable 
+              industry to any business. With this belief, Fastpoke
+              aims to bring promotion, transparency, and
+              accessibility to great recruiters in the industry. Here,
+              you can browse, message, and refer highly specialized 
+              recruiters. If you are seeking career opportunities,
+              career advice, or are looking to hire talent, Fastpoke
+              makes finding top recruiters quick and painless.
+            </p>
+            <p class="med">
+              Are you a recruiter of a boutique firm? Fastpoke is
+              a platform to increase your exposure and market
+              yourself. Through your recruiter profile, you receive 
+              written referrals, showcase your specialties,
+              and track your exposure through analytics.
+            </p>
+          </div>
+          <div class="pane pane-image">
+            <img src="assets/img/logomark.svg" />
+          </div>
+        </div>
+      </section>
+      <section class="bar-cta bar-lt-gray">
+        <div class="container">
+          <div class="bar-content">
+            <h3>Join the community and build your business or career!</h3>
+          </div>
+          <div class="bar-action">
+            <a href="#" class="btn btn-primary btn-raised">Discover</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="foot-left">
+          <a href="#" class="btn btn-outline btn-light">Get in touch</a><br/><br/>
+          <img src="assets/img/logo-white.svg" width="200" />
+        </div>
+        <div class="foot-right">
+          <nav>
+            <ul class="clean">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="help.html">Help</a></li>
+              <li><a href="terms.html">Terms</a></li>
+              <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+          </nav>
+          <ul class="clean foot-social">
+            <li>Follow us on</li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="foot-copyright">
+          &copy;2020 Fastpoke, LLC
+        </div>
+      </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script>
+      var controller = new ScrollMagic.Controller({
+        globalSceneOptions: { triggerHook: 'onLeave' }
+      });
+  
+      // build scenes
+      new ScrollMagic.Scene({triggerElement: "main"})
+            .setClassToggle("header", "active")
+            .addTo(controller);
+    </script>
+    <script src="script.js" async defer></script>
+  </body>
+</html>
