@@ -357,21 +357,21 @@ h1, h2, h3, h4, h5 {
   font-family: "Open Sans", sans-serif;
 }
 
-h1 {
+h1, .h1 {
   font-size: 36px;
   font-size: 3.6rem;
   line-height: 40px;
   letter-spacing: -0.75px;
 }
 
-h2 {
+h2, .h2 {
   font-size: 32px;
   font-size: 3.2rem;
   line-height: 34px;
   letter-spacing: -0.75px;
 }
 
-h3 {
+h3, .h3 {
   font-size: 28px;
   font-size: 2.8rem;
   line-height: 32px;
@@ -392,7 +392,7 @@ h5, .h5 {
   font-weight: bold;
 }
 
-h6 {
+h6, .h6 {
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 20px;
@@ -992,15 +992,24 @@ main {
   max-height: 90%;
 }
 
+.vector-images .banner.features .pane img {
+  border: 0 !important;
+  box-shadow: none;
+}
+
+#candidates .pane-copy,
 #recruiters .pane-copy {
   text-align: left;
 }
+#candidates .pane-copy p,
 #recruiters .pane-copy p {
   margin: 0 0 30px;
 }
+#candidates .pane-copy p:last-child,
 #recruiters .pane-copy p:last-child {
   margin-bottom: 0;
 }
+#candidates .pane-image img,
 #recruiters .pane-image img {
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.12);
