@@ -404,6 +404,11 @@ h6, .h6 {
   margin-top: 5px;
 }
 
+.text-center {
+  display: block;
+  text-align: center;
+}
+
 a {
   color: #3691ED;
   text-decoration: none;
@@ -2693,6 +2698,52 @@ ul.mb-contacts li.selection {
   background: #D6EAFF;
 }
 
+.reset {
+  background: #f3f3f3;
+}
+.reset header {
+  position: static;
+  background: none;
+  padding: 60px 30px 0;
+}
+.reset header a.logo {
+  width: auto !important;
+}
+.reset header a.logo img {
+  height: 80px;
+}
+.reset header .container {
+  justify-content: center;
+}
+.reset .access.content {
+  padding: 0 20px;
+}
+.reset .access.content .container {
+  background: #fff;
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05), 0 8px 16px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+@media (max-width: 800px) {
+  .reset .access.content .container {
+    padding: 30px;
+  }
+}
+.reset .access.content .container .btn {
+  margin: 50px auto;
+  display: block;
+  max-width: 200px;
+}
+.reset .access.content .copy {
+  display: block;
+  text-align: center;
+  font-size: 80%;
+  padding: 30px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
 ul.mb-reading-pane {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -3117,13 +3168,16 @@ section.waside .wm-content {
 
 ul.filter-box {
   display: block;
-  max-height: 210px;
+  height: 210px;
   overflow-y: scroll;
   border-radius: 6px;
   padding: 10px;
 }
 ul.filter-box li {
   color: #646464;
+}
+ul.filter-box li input[type=checkbox] {
+  margin-right: 5px;
 }
 
 .page-menu ul {
