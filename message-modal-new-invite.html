@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fastpoke</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel=icon href="assets/img/favicon.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="print" href="print.css">
+    <script src="https://kit.fontawesome.com/1a4d6d985d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="overlay-modal invitation-modal" id="message-modal">
+      <div class="mm-sender">
+        <span class="mms-image" style="background-image: url(assets/img/person3.jpg);"></span>
+        <b>Giana Fortuna</b>
+        <small><i class="fad fa-map-marker-alt"></i> Los Angeles, CA</small>
+      </div>
+      <div class="chat-box">
+        <textarea rows="8" placeholder="Type message here...">Hi Darren!
+
+My name is Giana and I'm looking for a new job in the Cannabis industry, specifically within Business Development. I would love to hop on a quick call to discuss any opportunities that might be out there for me as well as potential pivots could make.
+
+I look forward to hearing from you! 
+        </textarea>
+        <div class="cb-toolbar">
+          <a href="tel:+19148440641" class="btn btn-small"><i class="fal fa-phone"></i> (914) 844-0641</a>
+          <br/>
+          <a href="mailto:gfortuna@gmail.com" class="btn btn-small"><i class="fal fa-envelope"></i> gfortuna@gmail.com</a>
+          <a href="https://www.linkedin.com/in/giana-fortuna/" class="btn btn-small"><i class="fab fa-linkedin"></i> https://www.linkedin.com/in/giana-fortuna/</a>
+        </div>
+        <button class="btn btn-small btn-outline btn-decline">Decline</button>
+        <button class="btn btn-small btn-primary">Accept</button>
+      </div>
+    </div>
+    <header>
+      <div class="container">
+        <h1>
+          <a href="index.html" class="logo">
+            <img src="assets/img/logo.svg" alt="Fastpoke Logo" />
+          </a>
+        </h1>
+        <a href="#" class="btn btn-outline"><b>Browse <span>Recruiters</span></b></a>
+        <span class="tagline"></span>
+        <nav>
+          <ul class="clean">
+            <li><a href="account.html" class="btn btn-signin"><span>Sign In</span></a></li>
+            <li><a href="register.html" class="btn btn-primary btn-signin"><i class="fad fa-user-plus"></i><span>Sign Up</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Message Modal: New Invite</h1>
+      </div>
+    </main>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script>
+      var controller = new ScrollMagic.Controller({
+        globalSceneOptions: { triggerHook: 'onLeave' }
+      });
+  
+      // build scenes
+      new ScrollMagic.Scene({triggerElement: "main"})
+            .setClassToggle("header", "active")
+            .addTo(controller);
+    </script>
+    <script src="script.js" async defer></script>
+  </body>
+</html>

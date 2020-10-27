@@ -2863,7 +2863,7 @@ ul.mb-reading-pane {
     display: block;
     background: #fff;
     margin: -4px 0 0 0;
-    padding: 10px;
+    padding: 6px;
     border-radius: 0 0 6px 6px;
     border: 1px solid rgba(0,0,0,.12);
     border-top-style: dashed;
@@ -2942,6 +2942,41 @@ ul.mb-reading-pane {
   border-radius: 8px;
   padding: 30px 30px 20px;
 
+  &.invitation-modal {
+    .chat-box {
+      small {
+        display: block;
+        text-align: right;
+        font-style: italic;
+        color: #AA0606;
+        font-weight: bold;
+      }
+
+      .cb-toolbar {
+        background: none;
+        padding: 0;
+        border: 0;
+        padding: 8px 0;
+
+        .btn-small {
+          background: rgba(255,255,255,.6);
+          width: 100%;
+          text-align: left;
+          margin: 4px 0!important;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-weight: 400;
+
+          svg {
+            color: rgba(0,0,0,.2);
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
   &#message-modal {
     .mm-sender {
       display: block;
@@ -3001,11 +3036,17 @@ ul.mb-reading-pane {
 
         .btn-small {
           padding: 8px;
+          margin: 4px;
         }
       }
 
-      .btn.btn-primary {
+      .btn.btn-primary,
+      .btn.btn-outline {
         float: right;
+      }
+
+      .btn.btn-decline {
+        margin-left: 10px;
       }
     }
   }
@@ -3241,6 +3282,7 @@ section.waside {
       margin: 0;
       border-radius: 0;
     }
+    
   }
 }
 
