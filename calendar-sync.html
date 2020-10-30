@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fastpoke</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel=icon href="assets/img/favicon.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="print" href="print.css">
+    <script data-search-pseudo-elements defer src="https://kit.fontawesome.com/1a4d6d985d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>
+          <a href="index.html" class="logo">
+            <img src="assets/img/logo.svg" alt="Fastpoke Logo" />
+          </a>
+        </h1>
+        <a href="#" class="btn btn-outline"><b>Browse <span>Recruiters</span></b></a>
+        <span class="tagline"></span>
+        <nav>
+          <ul class="clean logged-in">
+            <li><a href="inbox.html"><i class="fad fa-comments-alt"></i><span>Messaging</span></a></li>
+            <li><a href="resume.html"><i class="fad fa-calendar"></i><span>Calendar</span></a></li>
+            <li>
+              <a class="acc-dropdown"><i class="profile" style="background-image: url(assets/img/person.jpg);"></i><span>Brian G.</span></a>
+              <ul class="clean dd-menu">
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="calendar" id="calendar-sync">
+      <section class="content" id="calendar-01">
+        <div class="container">
+          <div class="sidetitle fsc-title">
+            <h1>October</h1>
+          </div>
+          <p class="text-center">Sync your personal calendar and begin making available times for clients and 
+            candidates to schedule calls with you.</p>
+            <br/>
+          <div class="sync-buttons">
+            <a href="#" class="btn btn-outline"><i class="fad fa-envelope-square"></i> Sync with Outlook</a>
+            <a href="#" class="btn btn-outline"><i class="fab fa-google"></i> Sync with Google</a>
+          </div>
+          <div class="sync-buttons">
+            <a href="#" class="btn btn-outline"><i class="fad fa-calendar"></i> Sync with Calendly</a>
+            <a href="#" class="btn btn-outline"><i class="fab fa-apple"></i> Sync with Apple</a>
+          </div>
+          <br/><br/>
+          <br/><br/>
+          <br/><br/>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="foot-left">
+          <a href="#" class="btn btn-outline btn-light">Get in touch</a><br/><br/>
+          <img src="assets/img/logo-white.svg" width="200" />
+        </div>
+        <div class="foot-right">
+          <nav>
+            <ul class="clean">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="help.html">Help</a></li>
+              <li><a href="terms.html">Terms</a></li>
+              <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+          </nav>
+          <ul class="clean foot-social">
+            <li>Follow us on</li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="foot-copyright">
+          &copy;2020 Fastpoke, LLC
+        </div>
+      </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script>
+      var controller = new ScrollMagic.Controller({
+        globalSceneOptions: { triggerHook: 'onLeave' }
+      });
+  
+      // build scenes
+      new ScrollMagic.Scene({triggerElement: "main"})
+            .setClassToggle("header", "active")
+            .addTo(controller);
+    </script>
+    <script src="script.js" async defer></script>
+  </body>
+</html>

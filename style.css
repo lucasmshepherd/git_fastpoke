@@ -404,6 +404,20 @@ h6, .h6 {
   margin-top: 5px;
 }
 
+.sidetitle {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: center;
+}
+.sidetitle h1, .sidetitle h2, .sidetitle h3, .sidetitle h4, .sidetitle h5, .sidetitle h6 {
+  padding-right: 40px;
+}
+.sidetitle span {
+  color: rgba(0, 0, 0, 0.4);
+}
+
 .text-center {
   display: block;
   text-align: center;
@@ -447,7 +461,7 @@ p.big {
 }
 @media (min-width: 1000px) {
   .container {
-    max-width: 1000px;
+    max-width: 1200px;
   }
 }
 
@@ -456,7 +470,7 @@ p.big {
 .single-page .container,
 .search-page .container,
 .profile-page .container {
-    max-width: 950px;
+    max-width: 1200px;
   }
 }
 
@@ -470,7 +484,7 @@ p.big {
 }
 @media (min-width: 1000px) {
   .support-page .container {
-    max-width: 1030px;
+    max-width: 1200px;
   }
 }
 
@@ -2095,12 +2109,14 @@ ul.slick-dots li button {
 }
 
 .search h1,
-.inbox h1 {
+.inbox h1,
+.calendar h1 {
   font-weight: 300;
   color: rgba(0, 0, 0, 0.4);
 }
 .search h2,
-.inbox h2 {
+.inbox h2,
+.calendar h2 {
   font-size: 18px;
   font-size: 1.8rem;
 }
@@ -2304,6 +2320,23 @@ hr.or-hr:before {
     flex: 0 0 100%;
     padding-left: 0;
     order: 1;
+  }
+}
+
+.search-main.results .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-items: stretch;
+  align-content: stretch;
+}
+.search-main.results .sr-return {
+  flex: 0 0 50%;
+  padding: 30px 15px;
+}
+@media (max-width: 800px) {
+  .search-main.results .sr-return {
+    flex: 0 0 100%;
   }
 }
 
@@ -2696,6 +2729,182 @@ ul.mb-contacts li .si-meta {
 }
 ul.mb-contacts li.selection {
   background: #D6EAFF;
+}
+
+.calendar .content {
+  background: #f3f3f3;
+}
+
+.fs-calendar {
+  display: block;
+  padding-bottom: 40px;
+}
+
+.fsc-title {
+  padding-bottom: 20px;
+}
+.fsc-title h1 {
+  flex: 1 0 auto;
+  text-align: center;
+  position: relative;
+  padding: 0;
+}
+.fsc-title h1:after {
+  content: "Create available times by clicking on the squares.";
+  position: absolute;
+  top: 95%;
+  font-weight: 400;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+.fsc-title .fsc-prev,
+.fsc-title .fsc-next {
+  font-weight: 700;
+  flex: 0 0 48px;
+  font-size: 48px;
+  text-align: center;
+  width: 48px;
+  line-height: 48px;
+  padding-top: 20px;
+}
+
+.fsc-month {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  width: 100%;
+}
+
+.fsc-day {
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  min-height: 160px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  flex: 0 0 13.28%;
+  margin: 5px 0.5%;
+}
+@media (max-width: 1000px) {
+  .fsc-day {
+    flex: 0 0 100%;
+    min-height: none;
+  }
+  .fsc-day a {
+    min-height: 48px;
+  }
+}
+.fsc-day.prev-month, .fsc-day.next-month {
+  opacity: 0.4;
+  pointer-events: none;
+}
+@media (max-width: 1000px) {
+  .fsc-day.prev-month, .fsc-day.next-month {
+    display: none;
+  }
+}
+.fsc-day.prev-month li, .fsc-day.next-month li {
+  display: none;
+}
+.fsc-day a {
+  flex: 1 0 auto;
+  border-radius: 0 0 6px 6px;
+  position: relative;
+  z-index: 1;
+  background: #fafafa;
+}
+.fsc-day a:hover, .fsc-day a:active {
+  background: #3691ED;
+}
+.fsc-day a:hover:after, .fsc-day a:active:after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 24px;
+  line-height: 24px;
+  width: 24px;
+  text-align: center;
+  margin: -12px 0 0 -12px;
+  color: #fff;
+  z-index: 1;
+}
+
+#calendar-sync .fsc-title h1 {
+  margin-bottom: 0;
+}
+#calendar-sync .fsc-title h1:after {
+  content: none;
+}
+#calendar-sync p {
+  display: block;
+  max-width: 420px;
+  margin: 0 auto 10px;
+}
+
+.fsc-head {
+  padding: 10px 15px;
+}
+.fsc-head span {
+  display: block;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: right;
+}
+.fsc-head span b {
+  float: left;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 999px;
+  background: #f3f3f3;
+  min-width: 24px;
+  text-align: center;
+}
+
+ul.fsc-events {
+  display: block;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  margin-top: 0;
+}
+ul.fsc-events li {
+  line-height: 14px;
+  font-size: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 3px 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+ul.fsc-events li span {
+  display: block;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+}
+ul.fsc-events li:hover {
+  background: #3691ED;
+  color: #fff;
+}
+ul.fsc-events li:hover span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sync-buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.sync-buttons > * {
+  flex: 0 0 220px;
+  margin: 10px 20px;
 }
 
 .reset {
